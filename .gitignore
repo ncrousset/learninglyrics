@@ -3,3 +3,5 @@ myvenv/
 learninglyrics/learninglyrics/__pycache__/
 lyrics/migrations/__pycache__/
 lyrics/__pycache__/
+learninglyrics/lyrics/migrations/__pycache__/0003_auto_20161207_1100.cpython-35.pyc
+learninglyrics/lyrics/migrations/__pycache__/0004_auto_20161207_1102.cpython-35.pyc
