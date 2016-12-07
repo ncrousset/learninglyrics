@@ -33,8 +33,16 @@ class MusicProduction(models.Model):
 
 
 class Vocabulary(models.Model):
-    lyric_id = models.ForeignKey(Lyric, on_delete=models.CASCADE)
+    lyric = models.ForeignKey(Lyric, on_delete=models.CASCADE)
     detail = models.CharField(max_length=100, verbose_name='Detail')
     url_pronunciation = models.CharField(max_length=100, null=True, blank=True)
+
+
+class AuthorsHasLyrics(models.Model):
+    class Meta:
+        unique_together = (('author', 'lyric'), )
+
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    lyric  = models.ForeignKey(Lyric, on_delete=models.CASCADE)
 
 
