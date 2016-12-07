@@ -59,3 +59,10 @@ class ProductionHasLyrics(models.Model):
     production = models.ForeignKey(MusicProduction, on_delete=models.CASCADE)
     lyric = models.ForeignKey(Lyric, on_delete=models.CASCADE)
 
+class YourLyrics(models.Model):
+    class Meta:
+        unique_together = (('user', 'lyric'), )
+
+    user = models.ForeignKey('auth.user', on_delete=models.CASCADE)
+    lyric = models.ForeignKey(Lyric, on_delete=models.CASCADE)
+
