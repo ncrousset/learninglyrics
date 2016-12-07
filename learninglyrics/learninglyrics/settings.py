@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'account.apps.AccountConfig',
     'lyrics.apps.LyricsConfig',
+    'quiz.apps.QuizConfig',
     'rest_framework',
 
 ]
