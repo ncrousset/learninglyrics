@@ -16,3 +16,10 @@ class Lyric(models.Model):
     created_date = models.DateTimeField(default=timezone.now(), blank=True)
     updated_date = models.DateTimeField(null=True, blank=True)
     created_by = models.ForeignKey('auth.user', on_delete=models.SET_NULL, blank=True, null=True)
+
+
+class Author(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Author", db_index=True)
+    url_avatar = models.URLField(max_length=200, null=True)
+
+
