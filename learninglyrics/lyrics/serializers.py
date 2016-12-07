@@ -1,4 +1,4 @@
-from .models import Lyric, Author
+from .models import Lyric, Author, MusicProduction
 from rest_framework import serializers
 
 class LyricSerializer(serializers.HyperlinkedModelSerializer):
@@ -11,3 +11,9 @@ class AuthorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Author
         fields = ('name', 'url_avatar',)
+
+
+class MusicProductionSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = MusicProduction
+        fields = ('title', 'url_cover_page', 'published')
