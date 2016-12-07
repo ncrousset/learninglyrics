@@ -1,8 +1,5 @@
 from django.contrib.auth.models import User
 from rest_framework import viewsets
-
-from django.contrib.auth.models import User, Group
-from rest_framework import viewsets
 from account.serializers import UserSerializer
 
 from rest_framework.permissions import IsAuthenticated
