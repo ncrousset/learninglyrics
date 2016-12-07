@@ -1,5 +1,5 @@
 .idea/
 myvenv/
 learninglyrics/learninglyrics/__pycache__/
-develop.sqlite3
-learninglyrics/develop.sqlite3
+lyrics/migrations/__pycache__/
+lyrics/__pycache__/
