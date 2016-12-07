@@ -32,3 +32,9 @@ class MusicProduction(models.Model):
     published = models.DateTimeField(auto_now=False, auto_now_add=False)
 
 
+class Vocabulary(models.Model):
+    lyric_id = models.ForeignKey(Lyric, on_delete=models.CASCADE)
+    detail = models.CharField(max_length=100, verbose_name='Detail')
+    url_pronunciation = models.CharField(max_length=100, null=True, blank=True)
+
+

@@ -1,6 +1,6 @@
-from .models import Lyric, Author, MusicProduction
+from .models import Lyric, Author, MusicProduction, Vocabulary
 from rest_framework import viewsets
-from lyrics.serializers import LyricSerializer, AuthorSerializer, MusicProductionSerializer
+from lyrics.serializers import LyricSerializer, AuthorSerializer, MusicProductionSerializer, VocabularySerializer
 from rest_framework.permissions import IsAuthenticated
 
 class LyricViewSet(viewsets.ModelViewSet):
@@ -27,5 +27,13 @@ class MusicProductionViewSet(viewsets.ModelViewSet):
     """
     queryset = MusicProduction.objects.all()
     serializer_class = MusicProductionSerializer
+    permission_classes = (IsAuthenticated, )
+
+class VocabularyViewSet(viewsets.ModelViewSet):
+    """
+    API vocabulary de lyrics
+    """
+    queryset = Vocabulary.objects.all()
+    serializer_class = VocabularySerializer
     permission_classes = (IsAuthenticated, )
 
