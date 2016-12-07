@@ -52,4 +52,10 @@ class AuthorsHasProduction(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     production = models.ForeignKey(MusicProduction, on_delete=models.CASCADE)
 
+class ProductionHasLyrics(models.Model):
+    class Meta:
+        unique_together = (('production', 'lyric'), )
+
+    production = models.ForeignKey(MusicProduction, on_delete=models.CASCADE)
+    lyric = models.ForeignKey(Lyric, on_delete=models.CASCADE)
 
