@@ -15,6 +15,5 @@ urlpatterns = [
     url(r'^api/', include(router.urls)),
     url(r'^accounts/login/$', auth_views.login, {'template_name': 'account/login.html'}, name='account:login', ),
     url(r'^accounts/logout/$', auth_views.logout, {'next_page': '/accounts/login'}),
-    url(r'^login/', views.LoginView.as_view(), name='login2'),
 ]
 

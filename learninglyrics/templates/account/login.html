@@ -11,24 +11,17 @@
                  <div class="panel-body">
 
                      {% if form.errors %}
-                        <p>Your username and password didn't match. Please try again.</p>
+                        <p class="text-danger">Your username and password didn't match. Please try again.</p>
                      {% endif %}
 
                      <form role="form" method="post" action=".">
                          {% csrf_token %}
                          <fieldset>
                              <div class="form-group">
-
-                                 <!--<input class="form-control" placeholder="E-mail" name="email" type="text" autofocus>-->
-
-                                 <!--{{ form.username.label_tag }}-->
-                                 {{ form.username }}
-
+                                 <input class="form-control" placeholder="User name" id="{{form.username.id_for_label}}" name="{{form.username.html_name}}" type="text" autofocus />
                              </div>
                              <div class="form-group">
-                                 {{ form.password.label_tag }}
-                                 {{ form.password }}
-
+                                 <input class="form-control" placeholder="Password" id="{{form.password.id_for_label}}" name="{{form.password.html_name}}" type="password" />
                              </div>
                              <div class="checkbox">
                                  <label>
