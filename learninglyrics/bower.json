@@ -1,0 +1,22 @@
+{
+  "name": "learninglyrics",
+  "homepage": "https://github.com/ncrousset/learninglyrics",
+  "authors": [
+    "Rudys Natanael Acosta crousset <natanael926@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "~4.6.3"
+  }
+}
